@@ -1,6 +1,6 @@
 # research-ppt-skill
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Output](https://img.shields.io/badge/output-.pptx-orange)](https://www.npmjs.com/package/pptxgenjs)
 
 AI Agent **Skill** 集合：把论文变成研究组组会风格的中文学术 PPT。当前包含一个技能 [`research-report-cn`](./research-report-cn/)。
@@ -109,7 +109,7 @@ AI Agent **Skill** 集合：把论文变成研究组组会风格的中文学术 
 ```
 research-ppt-skill/
 ├── README.md
-├── LICENSE                        # Apache-2.0
+├── LICENSE                        # MIT
 ├── demo/                          # 成品 deck（文件名后缀 _by <模型>）
 │   ├── GAD_demo_by DeepSeek v4.1 Flash.pptx            # 32 页，同一任务
 │   ├── GAD_demo_by GPT 6.1 Sol.pptx                    # 32 页，同一任务
@@ -202,4 +202,4 @@ deck.save("deck.pptx");
 
 ## License
 
-[Apache-2.0](./LICENSE) © 2026 Ci Nie
+[MIT](./LICENSE) © 2026 Ci Nie
