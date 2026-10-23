@@ -29,12 +29,64 @@ AI Agent **Skill** 集合：把论文变成研究组组会风格的中文学术 
 **页面尺寸**：16:9（13.33″ × 7.5″），白底，中文宋体 + 西文 Times New Roman。
 **页数**：内容页 ≈ 时长（分钟）× 0.6。15 分钟约 9 页，30 分钟约 18 页。
 
+---
+
+## 演示 Demo
+
+📥 **[demo/GAD_demo.pptx](./demo/GAD_demo.pptx)**（32 页，约 1.0 MB）
+
+由 [`assets/example_deck.js`](./research-report-cn/assets/example_deck.js) 原样构建的成品：两篇图异常检测（GAD）论文的组会精读——**ReFi-GAD**（ICML 2026，特征对齐）与 **AG-Forge + TS-GGAD**（合成数据替代真实数据）。
+
+> GitHub 不能在线预览 `.pptx`，下载后用 PowerPoint / WPS / LibreOffice 打开。
+> 想自己复现：`cp assets/rr_lib.js assets/example_deck.js <目录>/ && cd <目录> && mv example_deck.js build.js && NODE_PATH=$(npm root -g) node build.js`
+
+### 逐页结构（32 页）
+
+| 页 | 内容 | 模板 |
+|---:|---|---|
+| 1 | 封面（左栏主题纹理 · `# Generalist GAD`） | cover |
+| 2 | 完整目录 | toc |
+| 3 | 目录 · 研究背景 | section |
+| 4 | 通用图异常检测：问题设定 | A 标签要点 |
+| 5 | 现有通用 GAD 方法速览 | B 表格 |
+| 6 | 目录 · ReFi-GAD（第 1 篇） | section |
+| 7 | 目录 · 子节：动机 | sub |
+| 8 | 现象：预训练反而带来负迁移 | D 图片 side |
+| 9 | 根因：PCA 只对齐了维度，没对齐语义 | D 图片 side |
+| 10 | 目录 · 子节：方法 | sub |
+| 11 | ReFi-GAD 整体框架 | D 图片 full |
+| 12 | 关系指纹 ReFi：五个维度 | B 表格 |
+| 13 | 模型：域共享编码 + SNR 自适应细化 | A 标签要点 |
+| 14 | 目录 · 子节：实验 | sub |
+| 15 | 主实验：14 个数据集 AUROC (%) | B 表格 |
+| 16 | 消融与跨域分析 | B 表格 |
+| 17 | 目录 · AG-Forge / TS-GGAD（第 2 篇） | section |
+| 18 | 目录 · 子节：动机 | sub |
+| 19 | 现象：真实训练数据太少 | D 图片 side |
+| 20 | 目录 · 子节：方法 | sub |
+| 21 | AG-Forge + TS-GGAD 整体框架 | D 图片 full |
+| 22 | AG-Forge：三阶段合成流水线 | B 表格 |
+| 23 | TS-GGAD：双流模型与课程学习 | A 标签要点 |
+| 24 | 目录 · 子节：实验 | sub |
+| 25 | 主实验：合成数据能否替代真实数据 | B 表格 |
+| 26 | 消融：哪些设计最关键 | B 表格 |
+| 27 | 目录 · 对比与思考 | section |
+| 28 | 两篇论文对比 | B 表格 |
+| 29 | 值得讨论的问题 | A 标签要点 |
+| 30 | 目录 · 未来方向 | section |
+| 31 | 未来方向 | C 列举 |
+| 32 | 谢谢聆听 | closing |
+
+**看点**：目录共出现 12 次（完整目录 1 次 + 每章章节页与子节页），当前章节/子节标红；红色只出现在目录项与 `{{关键词}}` 两处；表格页都带绿色 take-away 解读条；第 29 页把论文正文数字与表格对上不齐的地方列出来讨论，而不是悄悄取一个。
+
 ### 仓库结构
 
 ```
 research-ppt-skill/
 ├── README.md
 ├── LICENSE                        # Apache-2.0
+├── demo/
+│   └── GAD_demo.pptx              # 示例 deck 的成品（32 页，由 example_deck.js 构建）
 └── research-report-cn/            # 技能目录（目录名 = skill name）
     ├── SKILL.md                   # 技能主文档：8 步流程 + API 速查 + 视觉规范 + 常见错误
     ├── assets/
