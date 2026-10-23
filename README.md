@@ -38,10 +38,10 @@ AI Agent **Skill** 集合：把论文变成研究组组会风格的中文学术 
 | 文件 | 内容 | 规模 |
 |---|---|---|
 | 📥 **[GAD_demo.pptx](./demo/GAD_demo.pptx)** | 按 `example_deck.js` 的两篇 GAD 论文精读 | 32 页 / 1.0 MB |
-| 📥 **[GAD_demo_by GPT 6.1 Sol.pptx](./demo/GAD_demo_by%20GPT%206.1%20Sol.pptx)** | 同一个 GAD 任务（文件名标注为 GPT 6.1 Sol 版） | 32 页 / 0.88 MB |
+| 📥 **[GAD_demo_by GPT 6.1 Sol.pdf](./demo/GAD_demo_by%20GPT%206.1%20Sol.pdf)** | 同一个 GAD 任务（文件名标注为 GPT 6.1 Sol 版） | 32 页 / 1.27 MB |
 | 📥 **[AI_Agent_and_Harness_Survey_by DeepSeek v4.1 Flash.pptx](./demo/AI_Agent_and_Harness_Survey_by%20DeepSeek%20v4.1%20Flash.pptx)** | 另一个任务：调研并生成综述 | 33 页 / 0.72 MB |
 
-前两个是**同一个 GAD 任务的两次产出**，可以直接对比封面左栏、目录标红、表格密度与 take-away 写法的差异。
+前两个是**同一个 GAD 任务的两次产出**（一份 .pptx、一份 .pdf），可以直接对比封面左栏、目录标红、表格密度与 take-away 写法的差异。
 
 > GitHub 不能在线预览 `.pptx`，下载后用 PowerPoint / WPS / LibreOffice 打开。
 > 想自己复现：`cp assets/rr_lib.js assets/example_deck.js <目录>/ && cd <目录> && mv example_deck.js build.js && NODE_PATH=$(npm root -g) node build.js`
@@ -112,7 +112,7 @@ research-ppt-skill/
 ├── LICENSE                        # MIT
 ├── demo/                          # 成品 deck
 │   ├── GAD_demo.pptx                                   # 32 页，GAD 论文精读
-│   ├── GAD_demo_by GPT 6.1 Sol.pptx                    # 32 页，同一个 GAD 任务
+│   ├── GAD_demo_by GPT 6.1 Sol.pdf                     # 32 页，同一个 GAD 任务
 │   └── AI_Agent_and_Harness_Survey_by DeepSeek v4.1 Flash.pptx   # 33 页，综述任务
 └── research-report-cn/            # 技能目录（目录名 = skill name）
     ├── SKILL.md                   # 技能主文档：8 步流程 + API 速查 + 视觉规范 + 常见错误
