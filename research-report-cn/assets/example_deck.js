@@ -261,7 +261,7 @@ deck.tableSlide({
   ],
   takeaway: "The fingerprint is the real contribution: swapping it for PCA erases almost the whole gain, while the SNR module only fine-tunes an already transferable representation.",
   source: SRC1 + "；Table 2–4 与 Fig. 6",
-  notes: "注意：正文写 w/o R、w/o D 提升 20.39%、0.70%，按表 2 计算是 24.10、0.88，结论不变，引用时以表格为准。",
+  notes: "表 2 只列了 Group 2 的 7 个数据集，所以这里是 −24.10 / −0.88；正文的 20.39% / 0.70% 是附录 Table 8 全部 14 个数据集的结果（85.08 vs 64.69 / 84.38）。两者一致，引用时注明统计范围。",
 });
 
 // ------------------------------------------------------------------ 3 AG-Forge
@@ -390,7 +390,7 @@ deck.tableSlide({
   ],
   takeaway: "Read together, the papers form one line of work: first make the input transferable, then make the training data scalable, with the 5-dim fingerprint as the thread between them.",
   source: "来源：两篇论文",
-  notes: "第二篇里 ReFi-GAD 只有 81.22，比第一篇自报的 85.08 低，原因是支撑集从 50 降到 30。",
+  notes: "第二篇里 ReFi-GAD 为 81.22，低于第一篇自报的 85.08。两篇的支撑集大小不同（50 vs 30），差异可能与此有关，但论文没有单独验证。",
 });
 deck.stampSlide({
   title: "值得讨论的问题",
@@ -399,10 +399,10 @@ deck.stampSlide({
   details: [
     { cn: "同一方法，两篇结果不同", subs: [
       { cn: "ReFi-GAD 14 集平均：论文一 85.08（k = 50），论文二 81.22（K = 30）" },
-      { cn: "支撑集大小影响明显，横向比较前要先对齐设定" },
+      { cn: "两篇设定不同（支撑集 50 vs 30），差异来源需要控制变量复现；横向比较前先对齐设定" },
     ] },
-    { cn: "正文数字与表格不一致", subs: [
-      { cn: "论文一称 w/o R、w/o D 的差距为 20.39%、0.70%；按表 2 计算为 24.10、0.88" },
+    { cn: "同一消融，统计范围不同", subs: [
+      { cn: "正文 20.39 / 0.70 按全部 14 个数据集计（附录 Table 8）；正文表 2 只列 Group 2，算出来是 24.10 / 0.88" },
     ] },
     { cn: "PCA 在论文二里又出现了", subs: [
       { cn: "语义流仍用 PCA + 地标归一化；去掉语义流掉 4.58，说明原始语义信息仍不可缺" },
