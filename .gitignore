@@ -1,0 +1,10 @@
+node_modules/
+*.pptx
+preview/
+raw/
+figs/
+__pycache__/
+*.pyc
+.DS_Store
+paper.txt
+numbers.md
