@@ -9,7 +9,7 @@
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![output](https://img.shields.io/badge/output-.pptx-orange)
 
-[示例成品](demo/) · [工作原理](#工作原理) · [SKILL.md](research-report-cn/SKILL.md)
+[示例成品](demo/) · [工作原理](#工作原理) · [SKILL.md](research-report-cn/SKILL.md) · [进阶版](https://skillpay.alipay.com/shelf/product?productId=P0806000210832221&merchantId=2088242142310584)
 
 </div>
 
